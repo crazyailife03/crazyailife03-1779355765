@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="forest">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="在小名咖啡，我們專注於提供自然、美味的咖啡。來吧，讓身心靈一起沉醉於這個溫馨的咖啡角落。">
+  <title>小名咖啡 - 自然咖啡廳的溫馨角落</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4/dist/full.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============================================================
+  Section     : Header
+  Variant     : 6
+  Layout      : Announcement bar top + standard nav below
+  Placeholders: 小名咖啡, 首頁~評價,
+                #hero~#testimonials, 立即預約,
+                限時優惠！本月預約享 85 折
+============================================================ -->
+<header class="sticky top-0 z-50">
+  <!-- Announcement bar -->
+  <div class="bg-primary text-primary-content text-center text-xs sm:text-sm py-2 px-4 font-medium tracking-wide">
+    <i class="fa-solid fa-circle-info mr-1.5 opacity-80"></i>
+    <span>限時優惠！本月預約享 85 折</span>
+    <a href="#contact" class="ml-3 font-semibold underline underline-offset-2 opacity-90 hover:opacity-100 transition-opacity">立即預約 →</a>
+  </div>
+  <!-- Main navbar -->
+  <div class="bg-base-100 shadow-sm">
+    <div class="navbar container mx-auto max-w-6xl px-4">
+      <div class="navbar-start">
+        <a href="#" class="text-xl font-bold text-primary">小名咖啡</a>
+      </div>
+      <nav class="navbar-center hidden lg:flex">
+        <ul class="menu menu-horizontal gap-1 text-sm font-medium">
+          <li><a href="#hero" class="hover:text-primary transition-colors">首頁</a></li>
+          <li><a href="#features" class="hover:text-primary transition-colors">特色服務</a></li>
+          <li><a href="#about" class="hover:text-primary transition-colors">關於我們</a></li>
+          <li><a href="#contact" class="hover:text-primary transition-colors">聯絡我們</a></li>
+          <li><a href="#testimonials" class="hover:text-primary transition-colors">評價</a></li>
+        </ul>
+      </nav>
+      <div class="navbar-end gap-2">
+        <a href="#contact" class="btn btn-primary btn-sm hidden lg:flex">立即預約</a>
+        <button class="btn btn-ghost btn-square lg:hidden" onclick="toggleMobileMenu()">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- Mobile dropdown -->
+  <div id="mobile-menu" class="hidden lg:hidden border-t border-base-200 bg-base-100">
+    <ul class="menu p-4 gap-1">
+      <li><a href="#hero">首頁</a></li>
+      <li><a href="#features">特色服務</a></li>
+      <li><a href="#about">關於我們</a></li>
+      <li><a href="#contact">聯絡我們</a></li>
+      <li><a href="#testimonials">評價</a></li>
+    </ul>
+    <div class="px-4 pb-4">
+      <a href="#contact" class="btn btn-primary btn-sm w-full">立即預約</a>
+    </div>
+  </div>
+</header>
+
+
+  <!-- ============================================================
+  Section     : Hero
+  Variant     : 8
+  Layout      : 50/50 split — primary color panel (left) + image panel (right)
+  Placeholders: 來杯自然的咖啡吧, 讓每一口都是真正的享受, 在小名咖啡，我們專注於提供自然、美味的咖啡。來吧，讓身心靈一起沉醉於這個溫馨的咖啡角落。,
+                查看菜單, 了解更多, https://images.pexels.com/photos/34450955/pexels-photo-34450955.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+============================================================ -->
+<section id="hero" class="min-h-[80vh] flex flex-col lg:flex-row overflow-hidden">
+  <!-- Left: Primary color panel -->
+  <div class="bg-primary text-primary-content flex-1 flex items-center relative overflow-hidden">
+    <!-- Decorative large numeral -->
+    <div class="absolute right-0 top-0 font-black select-none pointer-events-none leading-none text-primary-content/5" style="font-size:18rem">01</div>
+    <!-- Decorative circle -->
+    <div class="absolute -bottom-16 -left-16 w-64 h-64 rounded-full border-2 border-primary-content/10 pointer-events-none"></div>
+    <!-- Content -->
+    <div class="relative z-10 px-10 py-16 lg:py-20 lg:pl-16 lg:pr-10 max-w-xl">
+      <p class="text-primary-content/60 font-semibold text-sm uppercase tracking-widest mb-5">讓每一口都是真正的享受</p>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-black leading-tight mb-6">來杯自然的咖啡吧</h1>
+      <p class="text-primary-content/80 text-lg md:text-xl mb-10 font-light leading-relaxed">在小名咖啡，我們專注於提供自然、美味的咖啡。來吧，讓身心靈一起沉醉於這個溫馨的咖啡角落。</p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="#contact" class="btn btn-neutral btn-lg">查看菜單</a>
+        <a href="#about" class="btn btn-outline border-primary-content text-primary-content hover:bg-primary-content hover:text-primary btn-lg">了解更多</a>
+      </div>
+    </div>
+  </div>
+  <!-- Right: Image panel -->
+  <div class="lg:w-[45%] min-h-[45vw] lg:min-h-0">
+    <img src="https://images.pexels.com/photos/34450955/pexels-photo-34450955.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="來杯自然的咖啡吧" class="w-full h-full object-cover">
+  </div>
+</section>
+
+
+  <!-- ============================================================
+  Section     : Features
+  Variant     : 1
+  Layout      : 3-column cards with icon on top
+  Placeholders: 我們的特色, 為您提供最優質的選擇,
+                fa-solid fa-mug-hot ~ ,
+                手沖咖啡 ~ ,
+                使用新鮮的咖啡豆，為您手沖最佳風味。 ~ 
+                (items 4~6 wrapped in ... block markers)
+============================================================ -->
+<section id="features" class="bg-base-100 py-16 md:py-24">
+  <div class="container mx-auto max-w-6xl px-4">
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <p class="text-primary font-semibold text-sm uppercase tracking-widest mb-2">為您提供最優質的選擇</p>
+      <h2 class="text-3xl md:text-4xl font-bold">我們的特色</h2>
+    </div>
+    <!-- Cards grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Items 1~3 always shown -->
+      <div class="card bg-base-200 shadow-sm hover:shadow-md transition-shadow">
+        <div class="card-body items-center text-center">
+          <div class="text-4xl mb-2"><i class="fa-solid fa-mug-hot"></i></div>
+          <h3 class="card-title text-lg">手沖咖啡</h3>
+          <p class="text-base-content/60 text-sm">使用新鮮的咖啡豆，為您手沖最佳風味。</p>
+        </div>
+      </div>
+      <div class="card bg-base-200 shadow-sm hover:shadow-md transition-shadow">
+        <div class="card-body items-center text-center">
+          <div class="text-4xl mb-2"><i class="fa-solid fa-leaf"></i></div>
+          <h3 class="card-title text-lg">自然食材</h3>
+          <p class="text-base-content/60 text-sm">所有的材料均來自天然、有機來源，保證健康。</p>
+        </div>
+      </div>
+      <div class="card bg-base-200 shadow-sm hover:shadow-md transition-shadow">
+        <div class="card-body items-center text-center">
+          <div class="text-4xl mb-2"><i class="fa-solid fa-heart"></i></div>
+          <h3 class="card-title text-lg">溫馨環境</h3>
+          <p class="text-base-content/60 text-sm">提供一個舒適的空間，讓您放鬆心情。</p>
+        </div>
+      </div>
+      <!-- Items 4~6 optional -->
+      
+      <div class="card bg-base-200 shadow-sm hover:shadow-md transition-shadow">
+        <div class="card-body items-center text-center">
+          <div class="text-4xl mb-2"><i class=""></i></div>
+          <h3 class="card-title text-lg"></h3>
+          <p class="text-base-content/60 text-sm"></p>
+        </div>
+      </div>
+      
+      
+      <div class="card bg-base-200 shadow-sm hover:shadow-md transition-shadow">
+        <div class="card-body items-center text-center">
+          <div class="text-4xl mb-2"><i class=""></i></div>
+          <h3 class="card-title text-lg"></h3>
+          <p class="text-base-content/60 text-sm"></p>
+        </div>
+      </div>
+      
+      
+      <div class="card bg-base-200 shadow-sm hover:shadow-md transition-shadow">
+        <div class="card-body items-center text-center">
+          <div class="text-4xl mb-2"><i class=""></i></div>
+          <h3 class="card-title text-lg"></h3>
+          <p class="text-base-content/60 text-sm"></p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+  <!-- ============================================================
+  Section     : Testimonials
+  Variant     : 1
+  Layout      : 3-column review cards with star rating
+  Placeholders: 客戶評價, 聽聽他們怎麼說,
+                這裡的手沖咖啡真的是一絕，每次來都會點一杯！, 小華, 常客,
+                環境舒適，很適合和朋友聊天。, 小美, 設計師,
+                愛上這裡的下午茶，太美味了！, 阿明, 學生
+============================================================ -->
+<section id="testimonials" class="bg-base-200 py-16 md:py-24">
+  <div class="container mx-auto max-w-6xl px-4">
+    <div class="text-center mb-12">
+      <p class="text-primary font-semibold text-sm uppercase tracking-widest mb-2">聽聽他們怎麼說</p>
+      <h2 class="text-3xl md:text-4xl font-bold">客戶評價</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="card bg-base-100 shadow-sm">
+        <div class="card-body gap-4">
+          <div class="flex gap-0.5 text-warning text-lg">★★★★★</div>
+          <p class="text-base-content/70 leading-relaxed italic">"這裡的手沖咖啡真的是一絕，每次來都會點一杯！"</p>
+          <div class="flex items-center gap-3 mt-auto pt-4 border-t border-base-200">
+            <div class="avatar placeholder">
+              <div class="bg-primary text-primary-content rounded-full w-10 h-10 flex items-center justify-center font-bold">
+                小華
+              </div>
+            </div>
+            <div>
+              <p class="font-bold text-sm">小華</p>
+              <p class="text-xs text-base-content/50">常客</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card bg-base-100 shadow-sm">
+        <div class="card-body gap-4">
+          <div class="flex gap-0.5 text-warning text-lg">★★★★★</div>
+          <p class="text-base-content/70 leading-relaxed italic">"環境舒適，很適合和朋友聊天。"</p>
+          <div class="flex items-center gap-3 mt-auto pt-4 border-t border-base-200">
+            <div class="avatar placeholder">
+              <div class="bg-secondary text-secondary-content rounded-full w-10 h-10 flex items-center justify-center font-bold">
+                小美
+              </div>
+            </div>
+            <div>
+              <p class="font-bold text-sm">小美</p>
+              <p class="text-xs text-base-content/50">設計師</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card bg-base-100 shadow-sm">
+        <div class="card-body gap-4">
+          <div class="flex gap-0.5 text-warning text-lg">★★★★★</div>
+          <p class="text-base-content/70 leading-relaxed italic">"愛上這裡的下午茶，太美味了！"</p>
+          <div class="flex items-center gap-3 mt-auto pt-4 border-t border-base-200">
+            <div class="avatar placeholder">
+              <div class="bg-accent text-accent-content rounded-full w-10 h-10 flex items-center justify-center font-bold">
+                阿明
+              </div>
+            </div>
+            <div>
+              <p class="font-bold text-sm">阿明</p>
+              <p class="text-xs text-base-content/50">學生</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <!-- ============================================================
+  Section     : About
+  Variant     : 8
+  Layout      : Centered card — top banner image + content below
+  Placeholders: 關於小名咖啡, 我們的故事, 小名咖啡希望分享對自然咖啡的熱愛。我們的咖啡不僅僅是飲品，更是一種生活方式，我們期望每位客人都能在這裡找到屬於自己的舒適感。,
+                了解我們的故事, https://images.pexels.com/photos/12181619/pexels-photo-12181619.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+============================================================ -->
+<section id="about" class="bg-base-200 py-16 md:py-24">
+  <div class="container mx-auto max-w-4xl px-4">
+    <div class="bg-base-100 border border-base-300 rounded-3xl shadow-sm overflow-hidden">
+      <!-- Top banner image -->
+      <div class="w-full h-56 md:h-72 overflow-hidden">
+        <img src="https://images.pexels.com/photos/12181619/pexels-photo-12181619.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="關於小名咖啡" class="w-full h-full object-cover">
+      </div>
+      <!-- Content -->
+      <div class="px-8 py-10 md:px-16 md:py-12 text-center relative overflow-hidden">
+        <!-- Decorative corner accent -->
+        <div class="absolute bottom-0 right-0 w-24 h-24 bg-secondary/6 rounded-tl-full pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-16 h-16 bg-primary/5 rounded-tr-full pointer-events-none"></div>
+        <!-- Content -->
+        <div class="relative z-10">
+          <span class="badge badge-primary badge-outline mb-6 px-4 py-2 text-xs uppercase tracking-widest font-semibold">我們的故事</span>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6">關於小名咖啡</h2>
+          <div class="w-12 h-1 bg-primary rounded mx-auto mb-6"></div>
+          <p class="text-base-content/60 text-lg leading-relaxed mb-10 max-w-2xl mx-auto">小名咖啡希望分享對自然咖啡的熱愛。我們的咖啡不僅僅是飲品，更是一種生活方式，我們期望每位客人都能在這裡找到屬於自己的舒適感。</p>
+          <a href="#contact" class="btn btn-primary btn-lg px-10">了解我們的故事</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  
+
+  <!-- ============================================================
+  Section     : Contact
+  Variant     : 2
+  Layout      : Centered 3-column info cards (email, phone, address) — no form
+  Placeholders: 聯絡我們, 隨時歡迎聯絡,
+                crazyailife03@gmail.com, 1231231231212, 中壢區中央西路二段100號10樓
+============================================================ -->
+<section id="contact" class="bg-base-200 py-16 md:py-24">
+  <div class="container mx-auto max-w-5xl px-4 text-center">
+    <p class="text-primary font-semibold text-sm uppercase tracking-widest mb-2">隨時歡迎聯絡</p>
+    <h2 class="text-3xl md:text-4xl font-bold mb-12">聯絡我們</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Email -->
+      <div class="card bg-base-100 shadow-sm hover:shadow-md transition-shadow">
+        <div class="card-body items-center text-center gap-3">
+          <div class="text-4xl text-primary"><i class="fa-solid fa-envelope"></i></div>
+          <h3 class="font-bold text-lg">Email</h3>
+          <a href="mailto:crazyailife03@gmail.com" class="text-primary hover:underline break-all">crazyailife03@gmail.com</a>
+        </div>
+      </div>
+      <!-- Phone -->
+      <div class="card bg-base-100 shadow-sm hover:shadow-md transition-shadow">
+        <div class="card-body items-center text-center gap-3">
+          <div class="text-4xl text-primary"><i class="fa-solid fa-phone"></i></div>
+          <h3 class="font-bold text-lg">Phone</h3>
+          <a href="tel:1231231231212" class="text-primary hover:underline">1231231231212</a>
+        </div>
+      </div>
+      <!-- Address -->
+      <div class="card bg-base-100 shadow-sm hover:shadow-md transition-shadow">
+        <div class="card-body items-center text-center gap-3">
+          <div class="text-4xl text-primary"><i class="fa-solid fa-location-dot"></i></div>
+          <h3 class="font-bold text-lg">Address</h3>
+          <p class="text-base-content/70">中壢區中央西路二段100號10樓</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- ============================================================
+  Section     : Footer
+  Variant     : 1
+  Layout      : 4-column: logo+tagline | quick links | quick links | contact info
+  Placeholders: 小名咖啡, 每一口，都是自然的味道,
+                服務項目 ~ 常見問題,
+                crazyailife03@gmail.com, 1231231231212, © 2025 小名咖啡. All rights reserved.
+============================================================ -->
+<footer class="bg-base-200 pt-14 pb-6">
+  <div class="container mx-auto max-w-6xl px-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+      <!-- Col 1: Logo + tagline -->
+      <div>
+        <a href="#" class="text-xl font-bold text-primary block mb-3">小名咖啡</a>
+        <p class="text-base-content/60 text-sm leading-relaxed">每一口，都是自然的味道</p>
+      </div>
+      <!-- Col 2: Quick links -->
+      <div>
+        <h4 class="font-bold text-sm uppercase tracking-widest mb-4">Navigation</h4>
+        <ul class="space-y-2 text-sm text-base-content/70">
+          <li><a href="#" class="hover:text-primary transition-colors">服務項目</a></li>
+          <li><a href="#" class="hover:text-primary transition-colors">關於我們</a></li>
+        </ul>
+      </div>
+      <!-- Col 3: More links -->
+      <div>
+        <h4 class="font-bold text-sm uppercase tracking-widest mb-4">More</h4>
+        <ul class="space-y-2 text-sm text-base-content/70">
+          <li><a href="#" class="hover:text-primary transition-colors">隱私政策</a></li>
+          <li><a href="#" class="hover:text-primary transition-colors">常見問題</a></li>
+        </ul>
+      </div>
+      <!-- Col 4: Contact -->
+      <div>
+        <h4 class="font-bold text-sm uppercase tracking-widest mb-4">Contact</h4>
+        <ul class="space-y-2 text-sm text-base-content/70">
+          <li><a href="mailto:crazyailife03@gmail.com" class="hover:text-primary transition-colors">crazyailife03@gmail.com</a></li>
+          <li><a href="tel:1231231231212" class="hover:text-primary transition-colors">1231231231212</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-base-300 pt-6 text-center text-xs text-base-content/40">
+      © 2025 小名咖啡. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
